@@ -1,0 +1,12 @@
+{
+  "name": "wmnfe-2410-react",
+  "version": "0.1.0",
+  "main": "index.html",
+  "repository": "https://github.com/nbilalis/wmnfe-2410-react.git",
+  "author": "Nicholaos Bilalis <n.bilalis@sae.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "serve": "^14.2.4"
+  }
+}

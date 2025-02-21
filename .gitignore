@@ -1,0 +1,10 @@
+.env*
+
+*.map
+*.zip
+*.pptx
+*.cmd
+
+.history/
+_examples/
+node_modules/
