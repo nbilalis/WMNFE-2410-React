@@ -464,73 +464,6 @@ root.render([
 ```
 
 ---
-class: long-text
-
-#### Loops & Conditionals
-
-Όπως αναφέρθηκε και νωρίτερα, η `React` ακολουθεί τη φιλοσοφία του _Functional Programming_.
-
-Σε αυτή επικρατεί η _declarative_ προσέγγιση, έναντι της _imperative_. Μέσα στα _curly brackets_ της `JSX` ενσωματώνουμε _expression_ και όχι _statement_.
-
-Για το λόγο αυτό, σε κώδικα `React` θα δούμε να χρησιμοποιείται συχνά η _higher-order function_ `map`, στη θέση εντολών και μεθόδων όπως οι `for`, `forEach`, κ.λπ.
-
-Επίσης, η _conditional_ λογική αναπαριστάται, όχι με τις εντολές `if` ή `switch`, αλλά με τους _ternary_, _logical_ και _nullish coalescing_ τελεστές, ειδικά μέσα στη `JSX`.
-
----
-class: long-code
-
-#### Παράδειγμα
-
-```js
-const movies = [{ title: 'Dune', rating: 8.4, sum: 117 }, ...];
-
-const Header = () => (<h1>Box Office</h1>);
-
-const MovieList = ({ movies }) => (<ul>
-    {movies.map((m) => (<li>
-      {m.title} {m.sum ? `| ${m.sum}m` : ''} | {m.rating}⭐
-    </li>))}
-  </ul>);
-
-const App = () => (
-  <React.Fragment>
-    <Header />
-    <MovieList movies={movies} />
-  </React.Fragment>
-);
-
-const root = ReactDOMClient.createRoot(document.getElementById('app'));
-root.render(<App />);
-
-```
-
----
-template: section
-
-## Homework
-
----
-layout: true
-template: chapter
-
-### Homework
-
----
-class: extra-long-text
-
-#### Λίστα Προϊόντων
-
-Φτιάξτε μια μικρή εφαρμογή σε `React`, που να εμφανίζει μία λίστα προϊόντων.
-
-Στην εφαρμογή θα πρέπει:
-
-- Να υπάρχει μία επικεφαλίδα `h1` (`Component` _Header_).
-- Να υπάρχει μία λίστα `ul` (`Component` _ProductList_), όπου κάθε στοιχείο `li` (`Component` _Product_) να είναι και ένα προϊόν.
-- Τα στοιχεία των προϊόντων να βρίσκονται σε πίνακα.
-- Τα προϊόντα να έχουν τα εξής χαρακτηριστικά: _τίτλος_, _τιμή_, _έκπτωση_ (σε ποσοστό), _απόθεμα_ και ένα πεδίο `isOnSale` που να δείχνει αν το προϊόν είναι σε προσφορά ή όχι (τα χαρακτηριστικά αυτά διαχειριστείτε τα όπως νομίζετε για την εμφάνιση των προϊόντων).
-- Να γίνει χρήση της σύνταξης `JSX`.
-
----
 template: list
 
 ### Χρήσιμα links
@@ -539,21 +472,11 @@ template: list
 - ![favicon](https://www.google.com/s2/favicons?domain=peterkellner.net) Running React 19 From a CDN and using esm.sh | Peter Kellner&#39;s Blog https://peterkellner.net/2024/05/10/running-react-19-from-a-cdn-and-using-esm.sh
 - ![favicon](https://www.google.com/s2/favicons?domain=esm.sh) ESM&gt;CDN https://esm.sh
 - ![favicon](https://www.google.com/s2/favicons?domain=react.dev) Add React to an Existing Project – React https://react.dev/learn/add-react-to-an-existing-project
-- ![favicon](https://www.google.com/s2/favicons?domain=nodejs.org) Noe.js - Download Node.js® https://nodejs.org/en/download
+- ![favicon](https://www.google.com/s2/favicons?domain=nodejs.org) Node.js - Download Node.js® https://nodejs.org/en/download
 - ![favicon](https://www.google.com/s2/favicons?domain=vite.dev) Getting Started – Vite https://vite.dev/guide
 - ![favicon](https://www.google.com/s2/favicons?domain=react.dev) DOM Elements – React https://react.dev/docs/dom-elements.html
 - ![favicon](https://www.google.com/s2/favicons?domain=react.dev) Your First Component – React https://react.dev/learn/your-first-component
 - ![favicon](https://www.google.com/s2/favicons?domain=react.dev) Writing Markup with JSX – React https://react.dev/learn/writing-markup-with-jsx
-- ![favicon](https://www.google.com/s2/favicons?domain=react.dev) Conditional Rendering – React https://react.dev/learn/conditional-rendering
-- ![favicon](https://www.google.com/s2/favicons?domain=react.dev) Rendering Lists – React https://react.dev/learn/rendering-lists
-
----
-template: list
-
-### Extra info
-
-- ![favicon](https://www.google.com/s2/favicons?domain=blog.isquaredsoftware.com) Blogged Answers: A (Mostly) Complete Guide to React Rendering Behavior · Mark's Dev Blog https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#component-types-and-reconciliation
-- ![](https://www.google.com/s2/favicons?domain=developer.mozilla.org) Array.prototype.map() - JavaScript | MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ---
 template: section
