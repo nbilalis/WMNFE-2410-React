@@ -22,6 +22,7 @@
 .remark-slide h4 {
   font-size: 1.5em;
   font-weight: bold;
+  margin-top: 1em;
 }
 .remark-slide h5 {
   font-size: 1em;
@@ -288,12 +289,15 @@
 }
 .remark-slide .list ul {
   padding-left: 0;
-  columns: 2;
-  column-gap: 3em;
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
 }
 .remark-slide .list ul li {
   list-style-type: none;
-  break-inside: avoid-column;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
   margin-top: 0;
   margin-bottom: 1em;
   font-size: 0.8em;
@@ -417,10 +421,7 @@ pre[class*=language-] {
 
 @media print {
   .remark-slide-scaler {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-transform-origin: initial;
     transform-origin: initial;
     transform: none !important;
     width: 100% !important;
@@ -428,4 +429,4 @@ pre[class*=language-] {
     left: auto !important;
     top: auto !important;
   }
-}
+}/*# sourceMappingURL=theme.css.map */

@@ -1,4 +1,4 @@
-$port = 8888
+$port = "8080"
 $temp_name = "output.pdf"
 
 fnm use 12
@@ -28,5 +28,5 @@ $match = Select-String -Path "index.html" -Pattern "assets/lecture-(\d{2})" | `
     Select-Object -ExpandProperty Matches
 
 $dest = (Join-Path $match.Value "React-$($match.Groups[1].Value).pdf")
-Move-Item $temp_name $dest  -Force
+Move-Item $temp_name $dest -Force
 Start-Process $dest
